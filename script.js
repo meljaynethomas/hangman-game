@@ -21,37 +21,41 @@ const word = document.querySelector(".word");
 
 const getBooksWord = () => {
   const randomWord = Math.floor(Math.random() * books.length)
-  word.innerHTML = books[randomWord].toUpperCase();
+  word.innerHTML = books[randomWord];
+  // let convertedToString = randomWord.toString([0]);
+  // console.log(convertedToString);
+  // const hiddenWord = convertedToString.replace(/A-Z/g, "_");
+  // document.querySelector(".word").innerHTML = hiddenWord;
 }
 getBooksWord()
 
 const getMoviesWord = () => {
   const randomWord = Math.floor(Math.random() * movies.length)
-  word.innerHTML = movies[randomWord].toUpperCase();
+  word.innerHTML = movies[randomWord];
 }
 getMoviesWord()
 
 const getCountriesWord = () => {
   const randomWord = Math.floor(Math.random() * countries.length)
-  word.innerHTML = countries[randomWord].toUpperCase();
+  word.innerHTML = countries[randomWord];
 }
 getCountriesWord()
 
 const getBeachWord = () => {
   const randomWord = Math.floor(Math.random() * beach.length)
-  word.innerHTML = beach[randomWord].toUpperCase();
+  word.innerHTML = beach[randomWord];
 }
 getBeachWord()
 
 const getAnimalsWord = () => {
     const randomWord = Math.floor(Math.random() * animals.length)
-    word.innerHTML = animals[randomWord].toUpperCase();
+    word.innerHTML = animals[randomWord];
 }
 getAnimalsWord()
 
 const getFoodWord = () => {
   const randomWord = Math.floor(Math.random() * food.length)
-  word.innerHTML = food[randomWord].toUpperCase();
+  word.innerHTML = food[randomWord];
 }
 getFoodWord()
 

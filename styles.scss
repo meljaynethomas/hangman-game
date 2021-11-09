@@ -3,9 +3,26 @@
 $font-body: 'Amatic SC', cursive;
 
 * {
-  margin: 0;
-  padding: 0;
+  margin: 20;
+  padding: 20;
   box-sizing: border-box;
   font-family: $font-body;
+  text-align: center;
+}
+
+h1 {
+  font-size: 70px;
+}
+
+button {
+  margin: 5px 5px;
+  padding: 5px 5px;
+  border-radius: 5px;
+  font-size: 30px;
+}
+
+.word {
+  font-size: 60px;
+  padding: 30px;
 }
 
