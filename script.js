@@ -10,19 +10,50 @@
 // HOMEPAGE - STICK MAN WALKING
 // BLACK/WHITE/MINIMALIST STICK MAN STYLE
 
+const books = ["frankenstein", "pride and prejudice", "the lord of the rings", "great expectations", "charlie and the chocolate factory", "the famous five", "harry potter",  "the very hungry caterpillar", "charlottes web", "where the wild things are"]
+const movies = ["the shining", "forrest gump", "titanic", "the exorcist", "scream", "rocky", "toy story", "the lion king", "ghostbusters", "star wars"]
+const countries = ["mexico", "france", "italy", "china", "australia", "russia", "canada", "ireland", "norway", "singapore"]
+const beach = ["bucket", "sand", "spade", "ice cream", "waves", "sun cream", "sandcastle", "towel", "ice lollies", "swimming"]
 const animals = ["fox", "mouse", "elephant", "horse", "giraffe", "flamingo", "zebra", "monkey", "penguin", "camel"];
 const food = ["fajitas", "toast", "curry", "salad", "sausages", "bananas", "chocolate", "biscuits", "potatoes", "pasta"];
-const word = document.querySelector("#word");
 
+const word = document.querySelector(".word");
+
+const getBooksWord = () => {
+  const randomWord = Math.floor(Math.random() * books.length)
+  word.innerHTML = books[randomWord].toUpperCase();
+}
+getBooksWord()
+
+const getMoviesWord = () => {
+  const randomWord = Math.floor(Math.random() * movies.length)
+  word.innerHTML = movies[randomWord].toUpperCase();
+}
+getMoviesWord()
+
+const getCountriesWord = () => {
+  const randomWord = Math.floor(Math.random() * countries.length)
+  word.innerHTML = countries[randomWord].toUpperCase();
+}
+getCountriesWord()
+
+const getBeachWord = () => {
+  const randomWord = Math.floor(Math.random() * beach.length)
+  word.innerHTML = beach[randomWord].toUpperCase();
+}
+getBeachWord()
 
 const getAnimalsWord = () => {
     const randomWord = Math.floor(Math.random() * animals.length)
-    word.innerHTML = animals[randomWord];
+    word.innerHTML = animals[randomWord].toUpperCase();
 }
 getAnimalsWord()
 
 const getFoodWord = () => {
   const randomWord = Math.floor(Math.random() * food.length)
-  word.innerHTML = food[randomWord];
+  word.innerHTML = food[randomWord].toUpperCase();
 }
 getFoodWord()
+
+
+
