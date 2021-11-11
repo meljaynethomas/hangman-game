@@ -9,15 +9,51 @@
 </head>
 <body>
   <h1>HANGMAN</h1>
-  <h2>Choose a Category</h2>
+  <h2>Please Choose a Category</h2>
+  
   <button class="button--books" onclick="getBooksWord()">BOOKS</button>
   <button class="button--movies" onclick="getMoviesWord()">MOVIES</button>
   <button class="button--countries" onclick="getCountriesWord()">COUNTRIES</button>
   <button class="button--beach" onclick="getBeachWord()">AT THE BEACH</button>
   <button class="button--animals" onclick="getAnimalsWord()">ANIMALS</button>
   <button class="button--food" onclick="getFoodWord()">FOOD</button>
+  
   <div class="word"></div>
-  <div class="letters"></div>
+  
+  <p class="keyboard">
+    <table class="keyboard__buttons">
+      <tr>
+        <td><button class="keyboard__buttons__letter__a" onclick="getletter(event)">a</button></td>
+        <td><button class="keyboard__buttons__letter__b" onclick="getletter(event)">b</button></td>
+        <td><button class="keyboard__buttons__letter__c" onclick="getletter(event)">c</button></td>
+        <td><button class="keyboard__buttons__letter__d" onclick="getletter(event)">d</button></td>
+        <td><button class="keyboard__buttons__letter__e" onclick="getletter(event)">e</button></td>
+        <td><button class="keyboard__buttons__letter__f" onclick="getletter(event)">f</button></td>
+        <td><button class="keyboard__buttons__letter__g" onclick="getletter(event)">g</button></td>
+        <td><button class="keyboard__buttons__letter__h" onclick="getletter(event)">h</button></td>
+        <td><button class="keyboard__buttons__letter__i" onclick="getletter(event)">i</button></td>
+        <td><button class="keyboard__buttons__letter__j" onclick="getletter(event)">j</button></td>
+        <td><button class="keyboard__buttons__letter__k" onclick="getletter(event)">k</button></td>
+        <td><button class="keyboard__buttons__letter__l" onclick="getletter(event)">l</button></td>
+        <td><button class="keyboard__buttons__letter__m" onclick="getletter(event)">m</button></td>
+      </tr>
+      <tr>
+        <td><button class="keyboard__buttons__letter__n" onclick="getletter(event)">n</button></td>
+        <td><button class="keyboard__buttons__letter__o" onclick="getletter(event)">o</button></td>
+        <td><button class="keyboard__buttons__letter__p" onclick="getletter(event)">p</button></td>
+        <td><button class="keyboard__buttons__letter__q" onclick="getletter(event)">q</button></td>
+        <td><button class="keyboard__buttons__letter__r" onclick="getletter(event)">r</button></td>
+        <td><button class="keyboard__buttons__letter__s" onclick="getletter(event)">s</button></td>
+        <td><button class="keyboard__buttons__letter__t" onclick="getletter(event)">t</button></td>
+        <td><button class="keyboard__buttons__letter__u" onclick="getletter(event)">u</button></td>
+        <td><button class="keyboard__buttons__letter__v" onclick="getletter(event)">v</button></td>
+        <td><button class="keyboard__buttons__letter__w" onclick="getletter(event)">w</button></td>
+        <td><button class="keyboard__buttons__letter__x" onclick="getletter(event)">x</button></td>
+        <td><button class="keyboard__buttons__letter__y" onclick="getletter(event)">y</button></td>
+        <td><button class="keyboard__buttons__letter__z" onclick="getletter(event)">z</button></td>
+      </tr>
+    </table>
+  </p>
 <script src="script.js"></script>
 </body>
 </html>

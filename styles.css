@@ -7,10 +7,6 @@
   text-align: center;
 }
 
-h1 {
-  font-size: 70px;
-}
-
 button {
   margin: 5px 5px;
   padding: 5px 5px;
@@ -18,7 +14,25 @@ button {
   font-size: 30px;
 }
 
+[class^=keyboard__buttons__] {
+  height: 50px;
+  width: 50px;
+}
+
+h1 {
+  font-size: 70px;
+}
+
 .word {
   font-size: 60px;
   padding: 30px;
+}
+
+.keyboard {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  margin: 100px auto 5px auto;
+  height: auto;
+  width: auto;
 }

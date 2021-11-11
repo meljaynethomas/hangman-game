@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Roboto:wght@300&display=swap');
+
+$font-body: 'Amatic SC', cursive;
+
+* {
+  margin: 20;
+  padding: 20;
+  box-sizing: border-box;
+  font-family: $font-body;
+  text-align: center;
+}

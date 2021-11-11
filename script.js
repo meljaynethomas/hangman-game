@@ -1,4 +1,4 @@
-// CLICK PLAY BUTTON TO START GAME
+// CLICK PLAY BUTTON TO START GAME - DESIGN NICE HOMEPAGE WITH WORD BUTTONS
 // GENERATE RANDOM WORD, WHICH IS HIDDEN FROM USER - DISPLAY UNDERSCORES SHOWING NUMBER OF LETTERS
 // USER TO GUESS LETTERS IN WORD - LETTERS DISPLAYED AS TILES
 // IF LETTER PRESENT, ADD IT TO WORD
@@ -20,44 +20,61 @@ const food = ["fajitas", "toast", "curry", "salad", "sausages", "bananas", "choc
 const word = document.querySelector(".word");
 
 const getBooksWord = () => {
-  const randomWord = Math.floor(Math.random() * books.length)
+  const randomWord = Math.floor(Math.random() * books.length);
   word.innerHTML = books[randomWord];
-  // let convertedToString = randomWord.toString([0]);
-  // console.log(convertedToString);
-  // const hiddenWord = convertedToString.replace(/A-Z/g, "_");
-  // document.querySelector(".word").innerHTML = hiddenWord;
 }
 getBooksWord()
 
+
 const getMoviesWord = () => {
-  const randomWord = Math.floor(Math.random() * movies.length)
+  const randomWord = Math.floor(Math.random() * movies.length);
   word.innerHTML = movies[randomWord];
 }
 getMoviesWord()
 
 const getCountriesWord = () => {
-  const randomWord = Math.floor(Math.random() * countries.length)
+  const randomWord = Math.floor(Math.random() * countries.length);
   word.innerHTML = countries[randomWord];
 }
 getCountriesWord()
 
 const getBeachWord = () => {
-  const randomWord = Math.floor(Math.random() * beach.length)
+  const randomWord = Math.floor(Math.random() * beach.length);
   word.innerHTML = beach[randomWord];
 }
 getBeachWord()
 
 const getAnimalsWord = () => {
-    const randomWord = Math.floor(Math.random() * animals.length)
+    const randomWord = Math.floor(Math.random() * animals.length);
     word.innerHTML = animals[randomWord];
 }
 getAnimalsWord()
 
 const getFoodWord = () => {
-  const randomWord = Math.floor(Math.random() * food.length)
+  const randomWord = Math.floor(Math.random() * food.length);
   word.innerHTML = food[randomWord];
 }
 getFoodWord()
+
+ //.replace(/a-z/g, "_");
+  // const generatedWord = word.innerHTML;
+  // const hiddenWord = generatedWord
+  // console.log(hiddenWord);
+  
+// let hiddenWord = [];
+// for(let i = 0; i < word.length; i++) {
+//   hiddenWord.push('_');
+//   hiddenWord.toString();
+
+
+// take the generated word - open on new page as underscores,
+// with keyboard and space for hangman drawing
+
+
+  // const hiddenWord = convertedToString.replace(/A-Z/g, "_");
+  // document.querySelector(".word").innerHTML = hiddenWord;
+
+
 
 
 
