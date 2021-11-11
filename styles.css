@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Roboto:wght@300&display=swap");
 * {
-  margin: 20;
-  padding: 20;
+  margin: auto;
   box-sizing: border-box;
   font-family: "Amatic SC", cursive;
   text-align: center;

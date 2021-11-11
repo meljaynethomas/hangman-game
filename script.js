@@ -10,27 +10,29 @@
 // HOMEPAGE - STICK MAN WALKING
 // BLACK/WHITE/MINIMALIST STICK MAN STYLE
 
-const books = ["frankenstein", "pride and prejudice", "the lord of the rings", "great expectations", "charlie and the chocolate factory", "the famous five", "harry potter",  "the very hungry caterpillar", "charlottes web", "where the wild things are"]
-const movies = ["the shining", "forrest gump", "titanic", "the exorcist", "scream", "rocky", "toy story", "the lion king", "ghostbusters", "star wars"]
+const books = ["frankenstein", "trainspotting", "emma", "middlemarch", "matilda", "atonement", "misery", "dracula", "persuasion"]
+const movies = ["titanic", "scream", "rocky", "ghostbusters", "psycho", "vertigo", "inception", "goodfellas", "alien", "jaws", "beetlejuice", "clueless"]
 const countries = ["mexico", "france", "italy", "china", "australia", "russia", "canada", "ireland", "norway", "singapore"]
-const beach = ["bucket", "sand", "spade", "ice cream", "waves", "sun cream", "sandcastle", "towel", "ice lollies", "swimming"]
+const beach = ["bucket", "sand", "spade", "waves", "sunshine", "sandcastle", "towel", "swimming"]
 const animals = ["fox", "mouse", "elephant", "horse", "giraffe", "flamingo", "zebra", "monkey", "penguin", "camel"];
 const food = ["fajitas", "toast", "curry", "salad", "sausages", "bananas", "chocolate", "biscuits", "potatoes", "pasta"];
 
 const word = document.querySelector(".word");
 
-const hiddenWord = [];
-  for(let i = 0; i < word.length; i++) {
-  hiddenWord.push('_');
-  hiddenWord.toString();
-  }
-
-
 const getBooksWord = () => {
+  
   const randomWord = Math.floor(Math.random() * books.length);
-  word.innerHTML = books[randomWord];
+  const generatedWord = books[randomWord];
+  console.log(generatedWord);
+  
+  const wordToGuess = [];
+    for(let i = 0; i < generatedWord.length; i++) {
+      wordToGuess.push('_');
+    }
+    word.innerHTML = wordToGuess.join(" ");
 }
 getBooksWord()
+
 
 
 const getMoviesWord = () => {
@@ -65,8 +67,10 @@ getFoodWord()
 
 
 
+
+
  //.replace(/a-z/g, "_");
-  // const generatedWord = word.innerHTML;
+  // 
   // const hiddenWord = generatedWord
   // console.log(hiddenWord);
 
