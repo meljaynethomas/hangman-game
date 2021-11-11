@@ -19,8 +19,11 @@ const food = ["fajitas", "toast", "curry", "salad", "sausages", "bananas", "choc
 
 const word = document.querySelector(".word");
 
-
-
+const hiddenWord = [];
+  for(let i = 0; i < word.length; i++) {
+  hiddenWord.push('_');
+  hiddenWord.toString();
+  }
 
 
 const getBooksWord = () => {
@@ -67,10 +70,7 @@ getFoodWord()
   // const hiddenWord = generatedWord
   // console.log(hiddenWord);
 
-// let hiddenWord = [];
-// for(let i = 0; i < word.length; i++) {
-//   hiddenWord.push('_');
-//   hiddenWord.toString();
+
 
 
 // take the generated word - open on new page as underscores,

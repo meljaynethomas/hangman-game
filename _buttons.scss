@@ -1,11 +1,10 @@
-button {
+.keyboard__buttons {
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
   margin: 5px 5px;
   padding: 5px 5px;
   border-radius: 5px;
   font-size: 30px;
-}
-
-[class^="keyboard__buttons__"] {
-  height: 50px;
-  width: 50px;
 }
