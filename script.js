@@ -19,6 +19,10 @@ const food = ["fajitas", "toast", "curry", "salad", "sausages", "bananas", "choc
 
 const word = document.querySelector(".word");
 
+
+
+
+
 const getBooksWord = () => {
   const randomWord = Math.floor(Math.random() * books.length);
   word.innerHTML = books[randomWord];
@@ -56,11 +60,13 @@ const getFoodWord = () => {
 }
 getFoodWord()
 
+
+
  //.replace(/a-z/g, "_");
   // const generatedWord = word.innerHTML;
   // const hiddenWord = generatedWord
   // console.log(hiddenWord);
-  
+
 // let hiddenWord = [];
 // for(let i = 0; i < word.length; i++) {
 //   hiddenWord.push('_');
@@ -73,6 +79,12 @@ getFoodWord()
 
   // const hiddenWord = convertedToString.replace(/A-Z/g, "_");
   // document.querySelector(".word").innerHTML = hiddenWord;
+
+
+  const getLetter = (event) => {
+    let value = event.target.textContent;
+    console.log(value);
+  };
 
 
 
