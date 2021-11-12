@@ -37,31 +37,66 @@ getBooksWord()
 
 const getMoviesWord = () => {
   const randomWord = Math.floor(Math.random() * movies.length);
-  word.innerHTML = movies[randomWord];
+  const generatedWord = movies[randomWord];
+  console.log(generatedWord);
+
+  const wordToGuess = [];
+    for(let i = 0; i < generatedWord.length; i++) {
+      wordToGuess.push('_');
+    }
+    word.innerHTML = wordToGuess.join(" ");
 }
 getMoviesWord()
 
 const getCountriesWord = () => {
   const randomWord = Math.floor(Math.random() * countries.length);
-  word.innerHTML = countries[randomWord];
+  const generatedWord = countries[randomWord];
+  console.log(generatedWord);
+
+  const wordToGuess = [];
+    for(let i = 0; i < generatedWord.length; i++) {
+      wordToGuess.push('_');
+    }
+    word.innerHTML = wordToGuess.join(" ");
 }
 getCountriesWord()
 
 const getBeachWord = () => {
   const randomWord = Math.floor(Math.random() * beach.length);
-  word.innerHTML = beach[randomWord];
+  const generatedWord = beach[randomWord];
+  console.log(generatedWord);
+
+  const wordToGuess = [];
+    for(let i = 0; i < generatedWord.length; i++) {
+      wordToGuess.push('_');
+    }
+    word.innerHTML = wordToGuess.join(" ");
 }
 getBeachWord()
 
 const getAnimalsWord = () => {
     const randomWord = Math.floor(Math.random() * animals.length);
-    word.innerHTML = animals[randomWord];
+    const generatedWord = animals[randomWord];
+    console.log(generatedWord);
+
+    const wordToGuess = [];
+    for(let i = 0; i < generatedWord.length; i++) {
+      wordToGuess.push('_');
+    }
+    word.innerHTML = wordToGuess.join(" ");
 }
 getAnimalsWord()
 
 const getFoodWord = () => {
   const randomWord = Math.floor(Math.random() * food.length);
-  word.innerHTML = food[randomWord];
+  const generatedWord = food[randomWord];
+  console.log(generatedWord);
+
+  const wordToGuess = [];
+    for(let i = 0; i < generatedWord.length; i++) {
+      wordToGuess.push('_');
+    }
+    word.innerHTML = wordToGuess.join(" ");
 }
 getFoodWord()
 
