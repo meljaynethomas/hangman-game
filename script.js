@@ -9,6 +9,7 @@
 // SHOW BUTTON - CLICK TO PLAY AGAIN...
 // HOMEPAGE - STICK MAN WALKING
 // BLACK/WHITE/MINIMALIST STICK MAN STYLE
+// CAN I DO COLOURFUL BALLOONS/FIREWORKS IF PERSON WINS?
 
 const books = ["frankenstein", "trainspotting", "emma", "middlemarch", "matilda", "atonement", "misery", "dracula", "persuasion"]
 const movies = ["titanic", "scream", "rocky", "ghostbusters", "psycho", "vertigo", "inception", "goodfellas", "alien", "jaws", "beetlejuice", "clueless"]
