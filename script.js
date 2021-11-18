@@ -18,7 +18,7 @@ const beach = ["bucket", "sand", "spade", "waves", "sunshine", "sandcastle", "to
 const animals = ["fox", "mouse", "elephant", "horse", "giraffe", "flamingo", "zebra", "monkey", "penguin", "camel"];
 const food = ["fajitas", "toast", "curry", "salad", "sausages", "bananas", "chocolate", "biscuits", "potatoes", "pasta"];
 
-const word = document.querySelector(".word");
+const word = document.querySelector(".gamepage__hiddenWord");
 
 const getBooksWord = () => {
   
@@ -102,31 +102,15 @@ const getFoodWord = () => {
 getFoodWord()
 
 
+const getLetter = (event) => {
+  let value = event.target.textContent;
+  console.log(value);
+};
 
 
+if letter = any letter in generated word, show letter instead of underline
 
- //.replace(/a-z/g, "_");
-  // 
-  // const hiddenWord = generatedWord
-  // console.log(hiddenWord);
-
-
-
-
-// take the generated word - open on new page as underscores,
-// with keyboard and space for hangman drawing
-
-
-  // const hiddenWord = convertedToString.replace(/A-Z/g, "_");
-  // document.querySelector(".word").innerHTML = hiddenWord;
-
-
-  const getLetter = (event) => {
-    let value = event.target.textContent;
-    console.log(value);
-  };
-
-
+cross out used letter
 
 
 

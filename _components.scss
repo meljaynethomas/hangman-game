@@ -1,8 +1,19 @@
-h1 {
-  font-size: 70px;
+.homepage {
+  &__heading {
+    font-size: 70px;
+  }
+  &__image {
+    height: auto;
+    width: auto;
+  }
 }
 
-.word {
-  font-size: 60px;
-  padding: 30px;
+.gamepage {
+  &__heading {
+    font-size: 70px;
+  }
+  &__hiddenWord {
+    font-size: 60px;
+    padding: 30px;
+  }
 }

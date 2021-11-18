@@ -11,13 +11,49 @@ button {
   padding: 5px 5px;
   border-radius: 5px;
   font-size: 30px;
+  cursor: pointer;
 }
 
-h1 {
+.homepage__button:hover {
+  text-decoration: none;
+}
+
+a:link,
+a:visited,
+a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+.homepage__heading {
   font-size: 70px;
 }
+.homepage__image {
+  height: auto;
+  width: auto;
+}
 
-.word {
+.gamepage__heading {
+  font-size: 70px;
+}
+.gamepage__hiddenWord {
   font-size: 60px;
   padding: 30px;
+}
+
+.homepage__heading {
+  padding: 50px 0px 50px 0px;
+}
+.homepage__image {
+  padding: 50px 0px 50px 0px;
+}
+
+.gamepage__heading {
+  padding: 200px 0px 100px 0;
+}
+.gamepage__hiddenWord {
+  padding: 300px 0px 50px 0px;
+}
+.gamepage__keyboard__buttons {
+  padding: 0px 0px 200px 0px;
 }
