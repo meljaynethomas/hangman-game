@@ -1,4 +1,4 @@
-// CLICK PLAY BUTTON TO START GAME - DESIGN NICE HOMEPAGE WITH WORD BUTTONS
+
 // GENERATE RANDOM WORD, WHICH IS HIDDEN FROM USER - DISPLAY UNDERSCORES SHOWING NUMBER OF LETTERS
 // USER TO GUESS LETTERS IN WORD - LETTERS DISPLAYED AS TILES
 // IF LETTER PRESENT, ADD IT TO WORD
@@ -7,8 +7,6 @@
 // IF USER GUESS WORD CORRECTLY, DO SOMETHING
 // IF USER DOES NOT GUESS WORD CORRECTLY, DO SOMETHING
 // SHOW BUTTON - CLICK TO PLAY AGAIN...
-// HOMEPAGE - STICK MAN WALKING
-// BLACK/WHITE/MINIMALIST STICK MAN STYLE
 // CAN I DO COLOURFUL BALLOONS/FIREWORKS IF PERSON WINS?
 
 const books = ["frankenstein", "trainspotting", "emma", "middlemarch", "matilda", "atonement", "misery", "dracula", "persuasion"]
@@ -18,99 +16,70 @@ const beach = ["bucket", "sand", "spade", "waves", "sunshine", "sandcastle", "to
 const animals = ["fox", "mouse", "elephant", "horse", "giraffe", "flamingo", "zebra", "monkey", "penguin", "camel"];
 const food = ["fajitas", "toast", "curry", "salad", "sausages", "bananas", "chocolate", "biscuits", "potatoes", "pasta"];
 
-const word = document.querySelector(".gamepage__hiddenWord");
+// const word = document.querySelector(".gamepage__hiddenWord");
 
-const getBooksWord = () => {
-  
+//button - array - word
+
+let word = "";
+let currentAnswerState = [];
+
+const generateBookWord = () => {
   const randomWord = Math.floor(Math.random() * books.length);
-  const generatedWord = books[randomWord];
-  console.log(generatedWord);
-  
-  const wordToGuess = [];
-    for(let i = 0; i < generatedWord.length; i++) {
-      wordToGuess.push('_');
-    }
-    word.innerHTML = wordToGuess.join(" ");
+  word = books[randomWord];
+  console.log(word)
 }
-getBooksWord()
 
-
-
-const getMoviesWord = () => {
+const generateMoviesWord = () => {
   const randomWord = Math.floor(Math.random() * movies.length);
-  const generatedWord = movies[randomWord];
-  console.log(generatedWord);
-
-  const wordToGuess = [];
-    for(let i = 0; i < generatedWord.length; i++) {
-      wordToGuess.push('_');
-    }
-    word.innerHTML = wordToGuess.join(" ");
+  word = movies[randomWord];
+  console.log(word)
 }
-getMoviesWord()
 
-const getCountriesWord = () => {
+const generateCountriesWord = () => {
   const randomWord = Math.floor(Math.random() * countries.length);
-  const generatedWord = countries[randomWord];
-  console.log(generatedWord);
-
-  const wordToGuess = [];
-    for(let i = 0; i < generatedWord.length; i++) {
-      wordToGuess.push('_');
-    }
-    word.innerHTML = wordToGuess.join(" ");
+  word = countries[randomWord];
+  console.log(word)
 }
-getCountriesWord()
 
-const getBeachWord = () => {
+const generateBeachWord = () => {
   const randomWord = Math.floor(Math.random() * beach.length);
-  const generatedWord = beach[randomWord];
-  console.log(generatedWord);
-
-  const wordToGuess = [];
-    for(let i = 0; i < generatedWord.length; i++) {
-      wordToGuess.push('_');
-    }
-    word.innerHTML = wordToGuess.join(" ");
+  word = beach[randomWord];
+  console.log(word)
 }
-getBeachWord()
 
-const getAnimalsWord = () => {
-    const randomWord = Math.floor(Math.random() * animals.length);
-    const generatedWord = animals[randomWord];
-    console.log(generatedWord);
-
-    const wordToGuess = [];
-    for(let i = 0; i < generatedWord.length; i++) {
-      wordToGuess.push('_');
-    }
-    word.innerHTML = wordToGuess.join(" ");
+const generateAnimalsWord = () => {
+  const randomWord = Math.floor(Math.random() * animals.length);
+  word = animals[randomWord];
+  console.log(word)
 }
-getAnimalsWord()
 
-const getFoodWord = () => {
+const generateFoodWord = () => {
   const randomWord = Math.floor(Math.random() * food.length);
-  const generatedWord = food[randomWord];
-  console.log(generatedWord);
+  word = food[randomWord];
+  console.log(word)
+}
+
+// //next function will take the word and display it as underscores - current user state
+// //update this as user makes guesses
+
 
   const wordToGuess = [];
     for(let i = 0; i < generatedWord.length; i++) {
       wordToGuess.push('_');
     }
     word.innerHTML = wordToGuess.join(" ");
-}
-getFoodWord()
 
 
-const getLetter = (event) => {
-  let value = event.target.textContent;
-  console.log(value);
-};
+// //const createUserState()
 
+// const getLetter = (event) => {
+//   let value = event.target.textContent;
+//   console.log(value);
+// };
 
-if letter = any letter in generated word, show letter instead of underline
+// if letter = any letter in generated word, show letter instead of underline
 
-cross out used letter
+// cross out used letter
 
 
 
