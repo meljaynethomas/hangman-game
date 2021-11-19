@@ -24,56 +24,64 @@ let currentAnswerState = [];
 const generateBookWord = () => {
   const randomWord = Math.floor(Math.random() * books.length);
   word = books[randomWord];
-  console.log(word)
+  // console.log(word)
 }
 
-const generateMoviesWord = () => {
+function generateMoviesWord() {
   const randomWord = Math.floor(Math.random() * movies.length);
   word = movies[randomWord];
-  console.log(word)
+  // console.log(word)
 }
 
 const generateCountriesWord = () => {
   const randomWord = Math.floor(Math.random() * countries.length);
   word = countries[randomWord];
-  console.log(word)
+  // console.log(word)
 }
 
 const generateBeachWord = () => {
   const randomWord = Math.floor(Math.random() * beach.length);
   word = beach[randomWord];
-  console.log(word)
+  // console.log(word)
 }
 
 const generateAnimalsWord = () => {
   const randomWord = Math.floor(Math.random() * animals.length);
   word = animals[randomWord];
-  console.log(word)
+  // console.log(word)
 }
 
 const generateFoodWord = () => {
   const randomWord = Math.floor(Math.random() * food.length);
   word = food[randomWord];
-  console.log(word)
+  // console.log(word)
 }
+
 
 // //next function will take the word and display it as underscores - current user state
 // //update this as user makes guesses
 
 const createUserState = () => {
   currentAnswerState = [];
-  for(let i = 0; i < word.length; i++) {
+  console.log(word)
+  for (let i = 0; i < word.length; i++) {
     currentAnswerState.push('_');
   }
   displayedAnswerState.innerHTML = currentAnswerState.join(" ");
 }
 
-
-
 const getLetter = (event) => {
   let value = event.target.textContent;
-  console.log(value);
-};
+  for (let i = 0; i < word.length; i++) {
+    if (word.charAt(i) == value) {
+      console.log(value)
+    }
+  }
+}
+      // displayedAnswerState.innerHTML = currentAnswerState.replace(/"_"/g, value);
+
+
+
 
 
 
