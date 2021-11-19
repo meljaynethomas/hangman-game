@@ -16,9 +16,7 @@ const beach = ["bucket", "sand", "spade", "waves", "sunshine", "sandcastle", "to
 const animals = ["fox", "mouse", "elephant", "horse", "giraffe", "flamingo", "zebra", "monkey", "penguin", "camel"];
 const food = ["fajitas", "toast", "curry", "salad", "sausages", "bananas", "chocolate", "biscuits", "potatoes", "pasta"];
 
-// const word = document.querySelector(".gamepage__hiddenWord");
-
-//button - array - word
+const displayedAnswerState = document.getElementById("gamepage__currentAnswerState");
 
 let word = "";
 let currentAnswerState = [];
@@ -62,24 +60,20 @@ const generateFoodWord = () => {
 // //next function will take the word and display it as underscores - current user state
 // //update this as user makes guesses
 
+const createUserState = () => {
+  currentAnswerState = [];
+  for(let i = 0; i < word.length; i++) {
+    currentAnswerState.push('_');
+  }
+  displayedAnswerState.innerHTML = currentAnswerState.join(" ");
+}
 
-  const wordToGuess = [];
-    for(let i = 0; i < generatedWord.length; i++) {
-      wordToGuess.push('_');
-    }
-    word.innerHTML = wordToGuess.join(" ");
 
 
-// //const createUserState()
-
-// const getLetter = (event) => {
-//   let value = event.target.textContent;
-//   console.log(value);
-// };
-
-// if letter = any letter in generated word, show letter instead of underline
-
-// cross out used letter
+const getLetter = (event) => {
+  let value = event.target.textContent;
+  console.log(value);
+};
 
 
 

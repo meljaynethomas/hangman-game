@@ -74,14 +74,14 @@
 
     <h1 class="gamepage__heading">Please Choose a Category</h1>
     
-    <button class="gamepage__button--books" onclick="generateBookWord()"><a href="#gamepage__hiddenWord">BOOKS</a></button>
-    <button class="gamepage__button--movies" onclick="generateMoviesWord()"><a href="#gamepage__hiddenWord">MOVIES</a></button>
-    <button class="gamepage__button--countries" onclick="generateCountriesWord()"><a href="#gamepage__hiddenWord">COUNTRIES</a></button>
-    <button class="gamepage__button--beach" onclick="generateBeachWord()"><a href="#gamepage__hiddenWord">AT THE BEACH</a></button>
-    <button class="gamepage__button--animals" onclick="generateAnimalsWord()"><a href="#gamepage__hiddenWord">ANIMALS</a></button>
-    <button class="gamepage__button--food" onclick="generateFoodWord()"><a href="#gamepage__hiddenWord">FOOD</a></button>
+    <button class="gamepage__button--books" onclick="generateBookWord(); createUserState()"><a href="#gamepage__currentAnswerState">BOOKS</a></button>
+    <button class="gamepage__button--movies" onclick="generateMoviesWord(); createUserState()"><a href="#gamepage__currentAnswerState">MOVIES</a></button>
+    <button class="gamepage__button--countries" onclick="generateCountriesWord(); createUserState()"><a href="#gamepage__currentAnswerState">COUNTRIES</a></button>
+    <button class="gamepage__button--beach" onclick="generateBeachWord(); createUserState()"><a href="#gamepage__currentAnswerState">AT THE BEACH</a></button>
+    <button class="gamepage__button--animals" onclick="generateAnimalsWord(); createUserState()"><a href="#gamepage__currentAnswerState">ANIMALS</a></button>
+    <button class="gamepage__button--food" onclick="generateFoodWord(); createUserState()"><a href="#gamepage__currentAnswerState">FOOD</a></button>
     
-    <div class="gamepage__hiddenWord" id="gamepage__hiddenWord"></div>
+    <p class="gamepage__currentAnswerState" id="gamepage__currentAnswerState"></p>
     
     <p class="gamepage__keyboard__display">
       <table class="gamepage__keyboard__buttons">
