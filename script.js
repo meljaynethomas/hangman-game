@@ -75,12 +75,8 @@ const updateUserState = (event) => {
    
   for (let i = 0; i < word.length; i++) {
     if (value === word[i]) {
-      currentAnswerState.splice(i, 0, value);
+      currentAnswerState.splice(i, 1, value);
       displayedAnswerState.innerHTML = currentAnswerState.join(" ");
-      console.log(value);
-      console.log(i);
-      console.log(`${value} is in ${word}, it is at index ${i}`);
-      console.log(currentAnswerState);
     }
   }
 }
