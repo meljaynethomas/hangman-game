@@ -16,9 +16,8 @@ const beach = ["bucket", "sand", "spade", "waves", "sunshine", "sandcastle", "to
 const animals = ["fox", "mouse", "elephant", "horse", "giraffe", "flamingo", "zebra", "monkey", "penguin", "camel"];
 const food = ["fajitas", "toast", "curry", "salad", "sausages", "bananas", "chocolate", "biscuits", "potatoes", "pasta"];
 
-const displayedAnswerState = document.getElementById("gamepage__currentAnswerState");
-
 let word = "";
+let displayedAnswerState = document.getElementById("gamepage__currentAnswerState");
 let currentAnswerState = [];
 
 const generateBookWord = () => {
@@ -70,15 +69,27 @@ const createUserState = () => {
   displayedAnswerState.innerHTML = currentAnswerState.join(" ");
 }
 
-const getLetter = (event) => {
+
+const updateUserState = (event) => {
   let value = event.target.textContent;
+   
   for (let i = 0; i < word.length; i++) {
-    if (word.charAt(i) == value) {
-      console.log(value)
+    if (value === word[i]) {
+      currentAnswerState.splice(i, 0, value);
+      displayedAnswerState.innerHTML = currentAnswerState.join(" ");
+      console.log(value);
+      console.log(i);
+      console.log(`${value} is in ${word}, it is at index ${i}`);
+      console.log(currentAnswerState);
     }
   }
 }
-      // displayedAnswerState.innerHTML = currentAnswerState.replace(/"_"/g, value);
+
+
+
+
+
+
 
 
 
