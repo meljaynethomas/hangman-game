@@ -11,7 +11,7 @@
   <section class="homepage">
   <h1 class="homepage__heading">H A N G M A N</h1>
   
-  <button class="homepage__button"><a href="#gamepage">PLAY GAME</a></button>
+  <button class="homepage__button"><a href="#selectionpage">PLAY GAME</a></button>
 
   <br>
 
@@ -70,17 +70,30 @@
   
   </section>    
 
-  <section class="gamepage" id="gamepage">
+  <section class="selectionpage" id="selectionpage">
 
-    <h1 class="gamepage__heading">Please Choose a Category</h1>
+    <h1 class="selectionpage__heading">Please Choose a Category</h1>
     
-    <button class="gamepage__button--books" onclick="generateBookWord(); createUserState()"><a href="#gamepage__currentAnswerState">BOOKS</a></button>
-    <button class="gamepage__button--movies" onclick="generateMoviesWord(); createUserState()"><a href="#gamepage__currentAnswerState">MOVIES</a></button>
-    <button class="gamepage__button--countries" onclick="generateCountriesWord(); createUserState()"><a href="#gamepage__currentAnswerState">COUNTRIES</a></button>
-    <button class="gamepage__button--beach" onclick="generateBeachWord(); createUserState()"><a href="#gamepage__currentAnswerState">AT THE BEACH</a></button>
-    <button class="gamepage__button--animals" onclick="generateAnimalsWord(); createUserState()"><a href="#gamepage__currentAnswerState">ANIMALS</a></button>
-    <button class="gamepage__button--food" onclick="generateFoodWord(); createUserState()"><a href="#gamepage__currentAnswerState">FOOD</a></button>
-    
+    <button class="selectionpage__button--books" onclick="generateBookWord(); createUserState()"><a href="#gamepage__heading">BOOKS</a></button>
+    <button class="selectionpage__button--movies" onclick="generateMoviesWord(); createUserState()"><a href="#gamepage__heading">MOVIES</a></button>
+    <button class="selectionpage__button--countries" onclick="generateCountriesWord(); createUserState()"><a href="#gamepage__heading">COUNTRIES</a></button>
+    <button class="selectionpage__button--beach" onclick="generateBeachWord(); createUserState()"><a href="#gamepage__heading">AT THE BEACH</a></button>
+    <button class="selectionpage__button--animals" onclick="generateAnimalsWord(); createUserState()"><a href="#gamepage__heading">ANIMALS</a></button>
+    <button class="selectionpage__button--food" onclick="generateFoodWord(); createUserState()"><a href="#gamepage__heading">FOOD</a></button>
+  </section>
+  
+  <section class="gamepage" id="gamepage">
+    <h1 class="gamepage__heading" id="gamepage__heading">OK... LET'S PLAY</h1>
+    <svg class="gamepage__image" width="201" height="275" viewBox="0 0 201 275" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="201" height="275" fill="white"/>
+      <path d="M38 19V256" stroke="black" stroke-width="3.49121" stroke-linecap="round"/>
+      <path d="M36 23H140" stroke="black" stroke-width="3" stroke-linecap="round"/>
+      <path d="M34 254H175" stroke="black" stroke-width="3.94676" stroke-linecap="round"/>
+      <path d="M141 22V44" stroke="black" stroke-width="3" stroke-linecap="round"/>
+      <path d="M34 57L67 24" stroke="black" stroke-width="3" stroke-linecap="round"/>
+      <path d="M34 215L73 254" stroke="black" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+      
     <p class="gamepage__currentAnswerState" id="gamepage__currentAnswerState"></p>
     
     <p class="gamepage__keyboard__display">

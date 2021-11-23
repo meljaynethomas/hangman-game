@@ -25,6 +25,10 @@ a:active {
   text-decoration: none;
 }
 
+.clicked {
+  color: #d3d3d3;
+}
+
 .homepage__heading {
   font-size: 70px;
 }
@@ -33,12 +37,19 @@ a:active {
   width: auto;
 }
 
+.selectionpage__heading {
+  font-size: 70px;
+}
+
 .gamepage__heading {
   font-size: 70px;
 }
+.gamepage__image {
+  height: auto;
+  width: auto;
+}
 .gamepage__currentAnswerState {
   font-size: 60px;
-  padding: 30px;
 }
 
 .homepage__heading {
@@ -48,11 +59,18 @@ a:active {
   padding: 50px 0px 50px 0px;
 }
 
-.gamepage__heading {
+.selectionpage__heading {
   padding: 200px 0px 100px 0;
 }
+
+.gamepage__heading {
+  padding: 200px 0px 50px 0;
+}
+.gamepage__image {
+  padding: 50px 0px 50px 0px;
+}
 .gamepage__currentAnswerState {
-  padding: 300px 0px 50px 0px;
+  padding: 50px 0px 50px 0px;
 }
 .gamepage__keyboard__buttons {
   padding: 0px 0px 200px 0px;

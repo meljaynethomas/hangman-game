@@ -8,12 +8,22 @@
   }
 }
 
+.selectionpage {
+  &__heading {
+    font-size: 70px;
+  }
+}
+
 .gamepage {
   &__heading {
     font-size: 70px;
   }
+  &__image {
+    height: auto;
+    width: auto;
+  }
   &__currentAnswerState {
     font-size: 60px;
-    padding: 30px;
   }
 }
+

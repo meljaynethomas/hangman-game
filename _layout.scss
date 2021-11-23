@@ -7,12 +7,21 @@
   }
 }
 
-.gamepage {
+.selectionpage {
   &__heading {
     padding: 200px 0px 100px 0;
   }
+}
+
+.gamepage {
+  &__heading {
+    padding: 200px 0px 50px 0;
+  }
+  &__image {
+    padding: 50px 0px 50px 0px;
+  }
   &__currentAnswerState {
-    padding: 300px 0px 50px 0px;
+    padding: 50px 0px 50px 0px;
   }
   &__keyboard__buttons {
     padding: 0px 0px 200px 0px;

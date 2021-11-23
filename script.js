@@ -19,6 +19,8 @@ const food = ["fajitas", "toast", "curry", "salad", "sausages", "bananas", "choc
 let word = "";
 let displayedAnswerState = document.getElementById("gamepage__currentAnswerState");
 let currentAnswerState = [];
+let numberOfGuesses = 0;
+const maximumGuesses = 7;
 
 const generateBookWord = () => {
   const randomWord = Math.floor(Math.random() * books.length);
@@ -56,30 +58,40 @@ const generateFoodWord = () => {
   // console.log(word)
 }
 
-
-// //next function will take the word and display it as underscores - current user state
-// //update this as user makes guesses
-
 const createUserState = () => {
   currentAnswerState = [];
-  console.log(word)
+  //console.log(word)
   for (let i = 0; i < word.length; i++) {
     currentAnswerState.push('_');
   }
   displayedAnswerState.innerHTML = currentAnswerState.join(" ");
 }
 
-
 const updateUserState = (event) => {
   let value = event.target.textContent;
-   
-  for (let i = 0; i < word.length; i++) {
-    if (value === word[i]) {
-      currentAnswerState.splice(i, 1, value);
-      displayedAnswerState.innerHTML = currentAnswerState.join(" ");
+  numberOfGuesses += 1;
+  
+    for (let i = 0; i < word.length; i++) {
+      event.target.classList.add("clicked");
+      
+      if (value === word[i] && numberOfGuesses < maximumGuesses) {
+        currentAnswerState.splice(i, 1, value);
+        displayedAnswerState.innerHTML = currentAnswerState.join(" ");
+      } else if (numberOfGuesses == word[i]) {
+        alert (`You have won!`);
+      } else if (numberOfGuesses == maximumGuesses) {
+        alert (`You have lost!`);
+      } else if (value != word[i]) {
+        //display images...
+      }
     }
   }
-}
+
+  //if all letters guessed, user wins
+
+
+
+
 
 
 
