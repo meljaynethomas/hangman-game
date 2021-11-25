@@ -1,13 +1,9 @@
-
-// GENERATE RANDOM WORD, WHICH IS HIDDEN FROM USER - DISPLAY UNDERSCORES SHOWING NUMBER OF LETTERS
-// USER TO GUESS LETTERS IN WORD - LETTERS DISPLAYED AS TILES
-// IF LETTER PRESENT, ADD IT TO WORD
 // IF LETTER NOT PRESENT, ADD TO HANGMAN
-// ONCE LETTER HAS BEEN SELECTED, DO SOMETHING TO THAT LETTER - STRIKETHROUGH
 // IF USER GUESS WORD CORRECTLY, DO SOMETHING
 // IF USER DOES NOT GUESS WORD CORRECTLY, DO SOMETHING
 // SHOW BUTTON - CLICK TO PLAY AGAIN...
 // CAN I DO COLOURFUL BALLOONS/FIREWORKS IF PERSON WINS?
+//show answer if user loses?
 
 const books = ["frankenstein", "trainspotting", "emma", "middlemarch", "matilda", "atonement", "misery", "dracula", "persuasion"]
 const movies = ["titanic", "scream", "rocky", "ghostbusters", "psycho", "vertigo", "inception", "goodfellas", "alien", "jaws", "beetlejuice", "clueless"]
@@ -19,8 +15,9 @@ const food = ["fajitas", "toast", "curry", "salad", "sausages", "bananas", "choc
 let word = "";
 let displayedAnswerState = document.getElementById("gamepage__currentAnswerState");
 let currentAnswerState = [];
-let numberOfGuesses = 0;
 const maximumGuesses = 7;
+let correctGuesses = 0;
+let numOfGuesses = 0;
 
 const generateBookWord = () => {
   const randomWord = Math.floor(Math.random() * books.length);
@@ -68,32 +65,47 @@ const createUserState = () => {
 }
 
 const updateUserState = (event) => {
-  let value = event.target.textContent;
-  numberOfGuesses += 1;
-  
-    for (let i = 0; i < word.length; i++) {
-      event.target.classList.add("clicked");
-      
-      if (value === word[i] && numberOfGuesses < maximumGuesses) {
-        currentAnswerState.splice(i, 1, value);
-        displayedAnswerState.innerHTML = currentAnswerState.join(" ");
-      } else if (numberOfGuesses == word[i]) {
-        alert (`You have won!`);
-      } else if (numberOfGuesses == maximumGuesses) {
-        alert (`You have lost!`);
-      } else if (value != word[i]) {
-        //display images...
-      }
+  let letter = event.target.textContent;
+
+  numOfGuesses += 1;
+  console.log(numOfGuesses);
+
+  let letterFound = false;
+
+  for (let i = 0; i < word.length; i++) {
+    event.target.classList.add("clicked");
+    
+    if (letter === word[i]) {
+      letterFound = true;
+      currentAnswerState.splice(i, 1, letter);
+      displayedAnswerState.innerHTML = currentAnswerState.join(" ");
+      correctGuesses += 1;
+      // console.log(correctGuesses);
+    } if (correctGuesses == word.length) {
+      console.log(`You've Won!`);    
+    } else if () {
+      letterFound = false;
+      numOfGuesses = numOfGuesses - correctGuesses;
+      console.log(numOfGuesses);
+
+
+
+      // console.log(`You've Lost!!`);
     }
   }
+}
+    //   numOfGuesses += 1;
+    //   // && numOfGuesses >= maximumGuesses
+    //   // console.log (`You've Lost!!`);
+    //   console.log(numOfGuesses);
+    // }
+  
 
-  //if all letters guessed, user wins
+    // if (guessIsCorrect != true  {
+    //   console.log (`You've Lost!!`);
+    //
 
-
-
-
-
-
+    // 
 
 
 
