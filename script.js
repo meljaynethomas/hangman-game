@@ -70,7 +70,6 @@ const updateUserState = (event) => {
   //get and update the UX for the button
   let letter = event.target.textContent;
   event.target.classList.add("clicked");
-  // image1.visible = true;
 
   //register that another guess has been made
   numOfGuesses += 1;
@@ -96,31 +95,47 @@ const updateUserState = (event) => {
   if(letterFound === false) {
     //update the number of incorrect guesses with our new information
     incorrectGuesses += 1;
-    // console.log(incorrectGuesses)
+    console.log(incorrectGuesses)
   }
 
   //now we work out whether that means that the user has won
-  let hasWon = true;
-  for (let i = 0; i < word.length; i++) {
-    if(word[i] === '_') {
-      hasWon = false;
-    }
+  // let hasWon = true;
+  // for (let i = 0; i < word.length; i++) {
+  //   if(word[i] === '_') {
+  //     hasWon = false;
+  //   }
+  // }
+
+  currentAnswerState.every(checkUnderscore)
+
+  function checkUnderscore(underscore) {
+    if (underscore = '_') {
+      alert("You won!");
+    };
   }
+
+
+
+
+
   //Now we work out what we need to do based on whether we've won or not
   if(hasWon) {
     alert("You won!")
-  } else {
-    if(incorrectGuesses === 1) {
-      //show the picture associated with 1
-    } else if(incorrectGuesses == 2) {
-      
-    }
-  }
+    } else if(incorrectGuesses === 1) {
+      document.getElementById("gamepage__image").src = "/images/img2_head.png";
+    } else if(incorrectGuesses === 2) {
+      document.getElementById("gamepage__image").src = "/images/img3_head_body.png";
+    } else if(incorrectGuesses === 3) {
+      document.getElementById("gamepage__image").src = "/images/img4_one_arm.png";
+    } else if(incorrectGuesses === 4) {
+    document.getElementById("gamepage__image").src = "/images/img5_two_arms.png";
+    } else if(incorrectGuesses === 5) {
+      document.getElementById("gamepage__image").src = "/images/img6_one_leg.png";
+    } else if(incorrectGuesses === 6) {
+      document.getElementById("gamepage__image").src = "/images/img7_lose.png"; 
+      alert("You've Lost!!");
+    } 
 }
- 
-    //   // && numOfGuesses >= maximumGuesses
-    //   // console.log (`You've Lost!!`);
-
   
 
 
