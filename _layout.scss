@@ -15,15 +15,24 @@
 
 .gamepage {
   &__heading {
-    padding: 200px 0px 50px 0;
+  padding: 300px 0 0 0;
+  }
+  &__category-sentence {
+  padding: 50px 0 0 0;
+  }  
+  &__currentAnswerState {
+    padding: 50px 0 100px 0;
   }
   &__image {
-    padding: 50px 0px 50px 0px;
-  }
-  &__currentAnswerState {
-    padding: 50px 0px 50px 0px;
+    max-height: 250px;
+    max-width: 250px;
   }
   &__keyboard__buttons {
-    padding: 0px 0px 200px 0px;
+    max-height: 250px;
+    max-width: 250px;
+  }
+  &__components {
+    display: flex;
+    margin-bottom: 100px;
   }
 }

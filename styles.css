@@ -44,9 +44,8 @@ a:active {
 .gamepage__heading {
   font-size: 70px;
 }
-.gamepage__image {
-  height: auto;
-  width: auto;
+.gamepage__category-sentence {
+  font-size: 30px;
 }
 .gamepage__currentAnswerState {
   font-size: 60px;
@@ -64,14 +63,23 @@ a:active {
 }
 
 .gamepage__heading {
-  padding: 200px 0px 50px 0;
+  padding: 300px 0 0 0;
 }
-.gamepage__image {
-  padding: 50px 0px 50px 0px;
+.gamepage__category-sentence {
+  padding: 50px 0 0 0;
 }
 .gamepage__currentAnswerState {
-  padding: 50px 0px 50px 0px;
+  padding: 50px 0 100px 0;
+}
+.gamepage__image {
+  max-height: 250px;
+  max-width: 250px;
 }
 .gamepage__keyboard__buttons {
-  padding: 0px 0px 200px 0px;
+  max-height: 250px;
+  max-width: 250px;
+}
+.gamepage__components {
+  display: flex;
+  margin-bottom: 100px;
 }
