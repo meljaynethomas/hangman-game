@@ -23,7 +23,6 @@ a:active {
   color: $clicked-button-color;
 }
 
-// [class^="keyboard__buttons__letter"] {
-//  height: 40px;
-//  width: 40px;
-// }
+.user__status-refresh {
+  display: none;
+}

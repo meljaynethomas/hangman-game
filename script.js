@@ -1,10 +1,3 @@
-// IF LETTER NOT PRESENT, ADD TO HANGMAN
-// IF USER GUESS WORD CORRECTLY, DO SOMETHING
-// IF USER DOES NOT GUESS WORD CORRECTLY, DO SOMETHING
-// SHOW BUTTON - CLICK TO PLAY AGAIN...
-// CAN I DO COLOURFUL BALLOONS/FIREWORKS IF PERSON WINS?
-//show answer if user loses?
-
 const books = ["frankenstein", "trainspotting", "emma", "middlemarch", "matilda", "atonement", "misery", "dracula", "persuasion"]
 const movies = ["titanic", "scream", "rocky", "ghostbusters", "psycho", "vertigo", "inception", "goodfellas", "alien", "jaws", "beetlejuice", "clueless"]
 const countries = ["mexico", "france", "italy", "china", "australia", "russia", "canada", "ireland", "norway", "singapore"]
@@ -15,10 +8,7 @@ const food = ["fajitas", "toast", "curry", "salad", "sausages", "bananas", "choc
 let word = "";
 let displayedAnswerState = document.querySelector('.gamepage__currentAnswerState');
 let currentAnswerState = [];
-const maximumGuesses = 7;
-let correctGuesses = 0;
 let incorrectGuesses = 0;
-let numOfGuesses = 0;
 
 const generateBookWord = () => {
   const randomWord = Math.floor(Math.random() * books.length);
@@ -58,7 +48,6 @@ const generateFoodWord = () => {
 
 const createUserState = () => {
   currentAnswerState = [];
-  //console.log(word)
   for (let i = 0; i < word.length; i++) {
     currentAnswerState.push('_');
   }
@@ -66,48 +55,38 @@ const createUserState = () => {
 }
 
 const updateUserState = (event) => {
-  //Before we look for the word...
-  //get and update the UX for the button
   let letter = event.target.textContent;
   event.target.classList.add("clicked");
 
-  //register that another guess has been made
-  numOfGuesses += 1;
-  // console.log(numOfGuesses);
-
-  //initialise a variable to say that we haven't found the letter yet...
   let letterFound = false;
 
-  //Searching through word letter by letter
   for (let i = 0; i < word.length; i++) {
-
     if (letter === word[i]) {
-      //we have found a letter in the word, so we need to:
-      //change the variable to say that the letter was found (useful later)
       letterFound = true;
-      //update the answer and the UI
       currentAnswerState.splice(i, 1, letter);
       displayedAnswerState.innerHTML = currentAnswerState.join(" ");
     } 
   }
 
-  //we've now searched the word...
   if(letterFound === false) {
-    //update the number of incorrect guesses with our new information
     incorrectGuesses += 1;
-    console.log(incorrectGuesses)
   }
 
-  //now we work out whether that means that the user has won
   let hasWon = true;
     if(currentAnswerState.includes('_')) {
       hasWon = false;
     }
 
-  //Now we work out what we need to do based on whether we've won or not
   if(hasWon) {
-    alert("You've won!")
     document.querySelector('.gamepage__image').src = "/images/img_win.png";
+    document.querySelector('.user__status-update').innerHTML = "You Win!"
+    //CAN I SHOW FIREWORKS/BALLOONS? LOOK UP HTML CANVAS
+    document.querySelector('.user__status-refresh').style.display = "block";
+      const refreshButton = document.querySelector('.user__status-refresh');
+        const refreshPage = () => {
+        location.reload();
+        }
+        refreshButton.addEventListener('click', refreshPage);
   } else if(incorrectGuesses === 1) {
     document.querySelector('.gamepage__image').src = "/images/img2_head.png";
   } else if(incorrectGuesses === 2) {
@@ -119,9 +98,15 @@ const updateUserState = (event) => {
   } else if(incorrectGuesses === 5) {
     document.querySelector('.gamepage__image').src = "/images/img6_one_leg.png";
   } else if(incorrectGuesses === 6) {
-    document.querySelector('.gamepage__image').src = "/images/img7_lose.png"; 
-    alert("You've Lost!!");
+    document.querySelector('.gamepage__image').src = "/images/img7_lose.png";
     displayedAnswerState.innerHTML = word;
+    document.querySelector('.user__status-update').innerHTML = "You Lose!"
+    document.querySelector('.user__status-refresh').style.display = "block";
+      const refreshButton = document.querySelector('.user__status-refresh');
+        const refreshPage = () => {
+        location.reload();
+        }
+        refreshButton.addEventListener('click', refreshPage);
   } 
 }
   

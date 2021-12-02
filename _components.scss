@@ -15,14 +15,17 @@
 }
 
 .gamepage {
-  &__heading {
-    font-size: 70px;
-  }
   &__category-sentence {
-    font-size: 30px;
+    font-size: 50px;
   }
   &__currentAnswerState {
     font-size: 60px;
   } 
 }
+
+.user__status-update {
+  font-size: 70px;
+}
+
+
 

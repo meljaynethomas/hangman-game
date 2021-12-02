@@ -29,6 +29,10 @@ a:active {
   color: #d3d3d3;
 }
 
+.user__status-refresh {
+  display: none;
+}
+
 .homepage__heading {
   font-size: 70px;
 }
@@ -41,32 +45,30 @@ a:active {
   font-size: 70px;
 }
 
-.gamepage__heading {
-  font-size: 70px;
-}
 .gamepage__category-sentence {
-  font-size: 30px;
+  font-size: 50px;
 }
 .gamepage__currentAnswerState {
   font-size: 60px;
 }
 
+.user__status-update {
+  font-size: 70px;
+}
+
 .homepage__heading {
-  padding: 50px 0px 50px 0px;
+  padding: 50px 0 50px 0;
 }
 .homepage__image {
-  padding: 50px 0px 50px 0px;
+  padding: 50px 0 50px 0;
 }
 
 .selectionpage__heading {
-  padding: 200px 0px 100px 0;
+  padding: 200px 0 50px 0;
 }
 
-.gamepage__heading {
-  padding: 300px 0 0 0;
-}
 .gamepage__category-sentence {
-  padding: 50px 0 0 0;
+  padding-top: 200px;
 }
 .gamepage__currentAnswerState {
   padding: 50px 0 100px 0;
@@ -81,5 +83,12 @@ a:active {
 }
 .gamepage__components {
   display: flex;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
+}
+
+.user__status {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 50px;
 }
