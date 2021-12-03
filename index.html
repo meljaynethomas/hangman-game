@@ -11,7 +11,7 @@
   <section class="homepage" id="homepage">
   <h1 class="homepage__heading">H A N G M A N</h1>
   
-  <button class="homepage__button"><a href="#selectionpage">PLAY GAME</a></button>
+  <button class="homepage__button"><a href="#selectionpage__heading">PLAY GAME</a></button>
 
   <br>
 
@@ -43,22 +43,24 @@
   
   </section>    
 
-  <section class="selectionpage" id="selectionpage">
-    <h1 class="selectionpage__heading">Please Choose a Category</h1>
+  <section class="selectionpage">
+    <h1 class="selectionpage__heading" id="selectionpage__heading">Please Choose a Category</h1>
 
     <!-- LOOK AT ADDING .addEventListener INSTEAD OF FUNCTIONS WITHIN HTML -->
     
-    <button class="selectionpage__button--books" onclick="generateBookWord(); createUserState()"><a href="#gamepage">BOOKS</a></button>
-    <button class="selectionpage__button--movies" onclick="generateMoviesWord(); createUserState()"><a href="#gamepage">MOVIES</a></button>
-    <button class="selectionpage__button--countries" onclick="generateCountriesWord(); createUserState()"><a href="#gamepage">COUNTRIES</a></button>
-    <button class="selectionpage__button--beach" onclick="generateBeachWord(); createUserState()"><a href="#gamepage">AT THE BEACH</a></button>
-    <button class="selectionpage__button--animals" onclick="generateAnimalsWord(); createUserState()"><a href="#gamepage">ANIMALS</a></button>
-    <button class="selectionpage__button--food" onclick="generateFoodWord(); createUserState()"><a href="#gamepage">FOOD</a></button>
+    <div class="selectionpage__button">
+      <button class="selectionpage__button--books" onclick="generateBookWord(); createUserState()"><a href="#gamepage">BOOKS</a></button>
+      <button class="selectionpage__button--movies" onclick="generateMoviesWord(); createUserState()"><a href="#gamepage">MOVIES</a></button>
+      <button class="selectionpage__button--countries" onclick="generateCountriesWord(); createUserState()"><a href="#gamepage">COUNTRIES</a></button>
+      <button class="selectionpage__button--beach" onclick="generateBeachWord(); createUserState()"><a href="#gamepage">AT THE BEACH</a></button>
+      <button class="selectionpage__button--animals" onclick="generateAnimalsWord(); createUserState()"><a href="#gamepage">ANIMALS</a></button>
+      <button class="selectionpage__button--food" onclick="generateFoodWord(); createUserState()"><a href="#gamepage">FOOD</a></button>
+  </div>
   </section>
   
   <section class="gamepage" id="gamepage">
-    
-    <p class="gamepage__category-sentence">Your chosen category is... <span class="gamepage__category"></span></p>
+
+    <p class="gamepage__category-sentence"><span class="gamepage__category"></span></p>
 
     <p class="gamepage__currentAnswerState"></p>
     
@@ -68,38 +70,38 @@
       <div class="gamepage__keyboard__display">
         <table class="gamepage__keyboard__buttons">
           <tr>
-            <td><button class="gamepage__keyboard__buttons__a" onclick="updateUserState(event)">a</button></td>
-            <td><button class="gamepage__keyboard__buttons__b" onclick="updateUserState(event);">b</button></td>
-            <td><button class="gamepage__keyboard__buttons__c" onclick="updateUserState(event);">c</button></td>
-            <td><button class="gamepage__keyboard__buttons__d" onclick="updateUserState(event);">d</button></td>
-            <td><button class="gamepage__keyboard__buttons__e" onclick="updateUserState(event);">e</button></td>     
-            <td><button class="gamepage__keyboard__buttons__f" onclick="updateUserState(event);">f</button></td>
-            <td><button class="gamepage__keyboard__buttons__g" onclick="updateUserState(event);">g</button></td>
+            <td><button class="gamepage__keyboard__button" onclick="updateUserState(event)"">a</button></td>
+            <td><button class="gamepage__keyboard__button" onclick="updateUserState(event)">b</button></td>
+            <td><button class="gamepage__keyboard__button" onclick="updateUserState(event)">c</button></td>
+            <td><button class="gamepage__keyboard__button" onclick="updateUserState(event)">d</button></td>
+            <td><button class="gamepage__keyboard__button" onclick="updateUserState(event)">e</button></td>     
+            <td><button class="gamepage__keyboard__button" onclick="updateUserState(event)">f</button></td>
+            <td><button class="gamepage__keyboard__button" onclick="updateUserState(event)">g</button></td>
           </tr>
           <tr>
-            <td><button class="gamepage__keyboard__buttons__h" onclick="updateUserState(event);">h</button></td>
-            <td><button class="gamepage__keyboard__buttons__i" onclick="updateUserState(event);">i</button></td>
-            <td><button class="gamepage__keyboard__buttons__j" onclick="updateUserState(event);">j</button></td>
-            <td><button class="gamepage__keyboard__buttons__k" onclick="updateUserState(event);">k</button></td>
-            <td><button class="gamepage__keyboard__buttons__l" onclick="updateUserState(event);">l</button></td>
-            <td><button class="gamepage__keyboard__buttons__m" onclick="updateUserState(event);">m</button></td>
-            <td><button class="gamepage__keyboard__buttons__n" onclick="updateUserState(event);">n</button></td>
+            <td><button class="gamepage__keyboard__button" onclick="updateUserState(event)">h</button></td>
+            <td><button class="gamepage__keyboard__button" onclick="updateUserState(event)">i</button></td>
+            <td><button class="gamepage__keyboard__button" onclick="updateUserState(event)">j</button></td>
+            <td><button class="gamepage__keyboard__button" onclick="updateUserState(event)">k</button></td>
+            <td><button class="gamepage__keyboard__button" onclick="updateUserState(event)">l</button></td>
+            <td><button class="gamepage__keyboard__button" onclick="updateUserState(event)">m</button></td>
+            <td><button class="gamepage__keyboard__button" onclick="updateUserState(event)">n</button></td>
           </tr>
           <tr>
-            <td><button class="gamepage__keyboard__buttons__o" onclick="updateUserState(event);">o</button></td>
-            <td><button class="gamepage__keyboard__buttons__p" onclick="updateUserState(event);">p</button></td>
-            <td><button class="gamepage__keyboard__buttons__q" onclick="updateUserState(event);">q</button></td>
-            <td><button class="gamepage__keyboard__buttons__r" onclick="updateUserState(event);">r</button></td>
-            <td><button class="gamepage__keyboard__buttons__s" onclick="updateUserState(event);">s</button></td>
-            <td><button class="gamepage__keyboard__buttons__t" onclick="updateUserState(event);">t</button></td>
-            <td><button class="gamepage__keyboard__buttons__u" onclick="updateUserState(event);">u</button></td>
+            <td><button class="gamepage__keyboard__button" onclick="updateUserState(event)">o</button></td>
+            <td><button class="gamepage__keyboard__button" onclick="updateUserState(event)">p</button></td>
+            <td><button class="gamepage__keyboard__button" onclick="updateUserState(event)">q</button></td>
+            <td><button class="gamepage__keyboard__button" onclick="updateUserState(event)">r</button></td>
+            <td><button class="gamepage__keyboard__button" onclick="updateUserState(event)">s</button></td>
+            <td><button class="gamepage__keyboard__button" onclick="updateUserState(event)">t</button></td>
+            <td><button class="gamepage__keyboard__button" onclick="updateUserState(event)">u</button></td>
           </tr> 
           <tr>
-            <td><button class="gamepage__keyboard__buttons__v" onclick="updateUserState(event);">v</button></td>
-            <td><button class="gamepage__keyboard__buttons__w" onclick="updateUserState(event);">w</button></td>
-            <td><button class="gamepage__keyboard__buttons__x" onclick="updateUserState(event);">x</button></td>
-            <td><button class="gamepage__keyboard__buttons__y" onclick="updateUserState(event);">y</button></td>
-            <td><button class="gamepage__keyboard__buttons__z" onclick="updateUserState(event);">z</button></td>
+            <td><button class="gamepage__keyboard__button" onclick="updateUserState(event)">v</button></td>
+            <td><button class="gamepage__keyboard__button" onclick="updateUserState(event)">w</button></td>
+            <td><button class="gamepage__keyboard__button" onclick="updateUserState(event)">x</button></td>
+            <td><button class="gamepage__keyboard__button" onclick="updateUserState(event)">y</button></td>
+            <td><button class="gamepage__keyboard__button" onclick="updateUserState(event)">z</button></td>
           </tr>
         </table>
       </div>

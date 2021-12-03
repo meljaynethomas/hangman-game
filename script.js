@@ -14,36 +14,42 @@ const generateBookWord = () => {
   const randomWord = Math.floor(Math.random() * books.length);
   word = books[randomWord];
   document.querySelector('.gamepage__category').innerHTML = "Books";
+  document.querySelector('.gamepage').style.display = "block";
 }
 
 const generateMoviesWord = () => {
   const randomWord = Math.floor(Math.random() * movies.length);
   word = movies[randomWord];
   document.querySelector('.gamepage__category').innerHTML = "Movies";
+  document.querySelector('.gamepage').style.display = "block";
 }
 
 const generateCountriesWord = () => {
   const randomWord = Math.floor(Math.random() * countries.length);
   word = countries[randomWord];
   document.querySelector('.gamepage__category').innerHTML = "Countries";
+  document.querySelector('.gamepage').style.display = "block";
 }
 
 const generateBeachWord = () => {
   const randomWord = Math.floor(Math.random() * beach.length);
   word = beach[randomWord];
   document.querySelector('.gamepage__category').innerHTML = "At The Beach";
+  document.querySelector('.gamepage').style.display = "block";
 }
 
 const generateAnimalsWord = () => {
   const randomWord = Math.floor(Math.random() * animals.length);
   word = animals[randomWord];
   document.querySelector('.gamepage__category').innerHTML = "Animals";
+  document.querySelector('.gamepage').style.display = "block";
 }
 
 const generateFoodWord = () => {
   const randomWord = Math.floor(Math.random() * food.length);
   word = food[randomWord];
   document.querySelector('.gamepage__category').innerHTML = "Food";
+  document.querySelector('.gamepage').style.display = "block";
 }
 
 const createUserState = () => {
@@ -57,6 +63,7 @@ const createUserState = () => {
 const updateUserState = (event) => {
   let letter = event.target.textContent;
   event.target.classList.add("clicked");
+  document.getElementsByClassName("gamepage__keyboard__button").disabled = true;
 
   let letterFound = false;
 
@@ -81,12 +88,6 @@ const updateUserState = (event) => {
     document.querySelector('.gamepage__image').src = "/images/img_win.png";
     document.querySelector('.user__status-update').innerHTML = "You Win!"
     //CAN I SHOW FIREWORKS/BALLOONS? LOOK UP HTML CANVAS
-    document.querySelector('.user__status-refresh').style.display = "block";
-      const refreshButton = document.querySelector('.user__status-refresh');
-        const refreshPage = () => {
-        location.reload();
-        }
-        refreshButton.addEventListener('click', refreshPage);
   } else if(incorrectGuesses === 1) {
     document.querySelector('.gamepage__image').src = "/images/img2_head.png";
   } else if(incorrectGuesses === 2) {
@@ -109,7 +110,6 @@ const updateUserState = (event) => {
         refreshButton.addEventListener('click', refreshPage);
   } 
 }
-  
 
 
 
