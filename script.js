@@ -63,7 +63,7 @@ const createUserState = () => {
 const updateUserState = (event) => {
   let letter = event.target.textContent;
   event.target.classList.add("clicked");
-  document.getElementsByClassName("gamepage__keyboard__button").disabled = true;
+  event.target.disabled = true;
 
   let letterFound = false;
 
@@ -87,7 +87,12 @@ const updateUserState = (event) => {
   if(hasWon) {
     document.querySelector('.gamepage__image').src = "/images/img_win.png";
     document.querySelector('.user__status-update').innerHTML = "You Win!"
-    //CAN I SHOW FIREWORKS/BALLOONS? LOOK UP HTML CANVAS
+    document.querySelector('.user__status-refresh').style.display = "block";
+      const refreshButton = document.querySelector('.user__status-refresh');
+        const refreshPage = () => {
+        location.reload();
+        }
+        refreshButton.addEventListener('click', refreshPage);
   } else if(incorrectGuesses === 1) {
     document.querySelector('.gamepage__image').src = "/images/img2_head.png";
   } else if(incorrectGuesses === 2) {

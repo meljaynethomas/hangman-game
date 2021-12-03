@@ -74,23 +74,32 @@ a:active {
   display: none;
 }
 .gamepage__currentAnswerState {
+  padding-top: 25px;
   padding-bottom: 50px;
 }
 .gamepage__image {
   max-height: 250px;
   max-width: 250px;
+  padding: 30px 0 30px 0;
 }
 .gamepage__keyboard__buttons {
   max-height: 250px;
   max-width: 250px;
 }
-.gamepage__components {
+.gamepage__container {
   display: flex;
+  justify-content: left;
+}
+@media screen and (max-width: 768px) {
+  .gamepage__container {
+    flex-direction: column;
+  }
 }
 
 .user__status {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 50px;
   padding-bottom: 400px;
 }
