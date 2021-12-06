@@ -1,1 +1,1 @@
-# hangman-game
+BRIEF: Design and build a fully functioning browser based game using HTML, CSS/SCSS and JavaScript. JavaScript code must be formatted as functions or Classes, and events in the game must be triggered by click or keypress events.

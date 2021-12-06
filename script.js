@@ -10,6 +10,13 @@ let displayedAnswerState = document.querySelector('.gamepage__currentAnswerState
 let currentAnswerState = [];
 let incorrectGuesses = 0;
 
+const booksSelector = document.querySelector(".selectionpage__button--books");
+const moviesSelector = document.querySelector(".selectionpage__button--movies");
+const countriesSelector = document.querySelector(".selectionpage__button--countries");
+const beachSelector = document.querySelector(".selectionpage__button--beach");
+const animalsSelector = document.querySelector(".selectionpage__button--animals");
+const foodSelector = document.querySelector(".selectionpage__button--food");
+
 const generateBookWord = () => {
   const randomWord = Math.floor(Math.random() * books.length);
   word = books[randomWord];
@@ -60,6 +67,24 @@ const createUserState = () => {
   displayedAnswerState.innerHTML = currentAnswerState.join(" ");
 }
 
+booksSelector.addEventListener("click", generateBookWord);
+booksSelector.addEventListener("click", createUserState);
+
+moviesSelector.addEventListener("click", generateMoviesWord);
+moviesSelector.addEventListener("click", createUserState);
+
+countriesSelector.addEventListener("click", generateCountriesWord);
+countriesSelector.addEventListener("click", createUserState);
+
+beachSelector.addEventListener("click", generateBeachWord);
+beachSelector.addEventListener("click", createUserState);
+
+animalsSelector.addEventListener("click", generateAnimalsWord);
+animalsSelector.addEventListener("click", createUserState);
+
+foodSelector.addEventListener("click", generateFoodWord);
+foodSelector.addEventListener("click", createUserState);
+
 const updateUserState = (event) => {
   let letter = event.target.textContent;
   event.target.classList.add("clicked");
@@ -85,43 +110,37 @@ const updateUserState = (event) => {
     }
 
   if(hasWon) {
-    document.querySelector('.gamepage__image').src = "/images/img_win.png";
-    document.querySelector('.user__status-update').innerHTML = "You Win!"
-    document.querySelector('.user__status-refresh').style.display = "block";
-      const refreshButton = document.querySelector('.user__status-refresh');
+    document.querySelector(".gamepage__image").src = "/images/img_win.png";
+    document.querySelector(".user__status-update").innerHTML = "You Win!"
+    document.querySelector(".user__status-refresh").style.display = "block";
+      const refreshButton = document.querySelector(".user__status-refresh");
         const refreshPage = () => {
         location.reload();
         }
-        refreshButton.addEventListener('click', refreshPage);
+        refreshButton.addEventListener("click", refreshPage);
   } else if(incorrectGuesses === 1) {
-    document.querySelector('.gamepage__image').src = "/images/img2_head.png";
+    document.querySelector(".gamepage__image").src = "/images/img2_head.png";
   } else if(incorrectGuesses === 2) {
-    document.querySelector('.gamepage__image').src = "/images/img3_head_body.png";
+    document.querySelector(".gamepage__image").src = "/images/img3_head_body.png";
   } else if(incorrectGuesses === 3) {
-    document.querySelector('.gamepage__image').src = "/images/img4_one_arm.png";
+    document.querySelector(".gamepage__image").src = "/images/img4_one_arm.png";
   } else if(incorrectGuesses === 4) {
-    document.querySelector('.gamepage__image').src = "/images/img5_two_arms.png";
+    document.querySelector(".gamepage__image").src = "/images/img5_two_arms.png";
   } else if(incorrectGuesses === 5) {
-    document.querySelector('.gamepage__image').src = "/images/img6_one_leg.png";
+    document.querySelector(".gamepage__image").src = "/images/img6_one_leg.png";
   } else if(incorrectGuesses === 6) {
-    document.querySelector('.gamepage__image').src = "/images/img7_lose.png";
+    document.querySelector(".gamepage__image").src = "/images/img7_lose.png";
     displayedAnswerState.innerHTML = word;
-    document.querySelector('.user__status-update').innerHTML = "You Lose!"
-    document.querySelector('.user__status-refresh').style.display = "block";
-      const refreshButton = document.querySelector('.user__status-refresh');
+    document.querySelector(".user__status-update").innerHTML = "You Lose!"
+    document.querySelector(".user__status-refresh").style.display = "block";
+      const refreshButton = document.querySelector(".user__status-refresh");
         const refreshPage = () => {
         location.reload();
         }
-        refreshButton.addEventListener('click', refreshPage);
+        refreshButton.addEventListener("click", refreshPage);
   } 
 }
-
-
-
-
-
-
-
-
-
+  document.querySelectorAll(".gamepage__keyboard__button").forEach(letter => {
+    letter.addEventListener("click", updateUserState)
+  });
 

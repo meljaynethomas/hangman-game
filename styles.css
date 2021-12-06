@@ -78,13 +78,13 @@ a:active {
   padding-bottom: 50px;
 }
 .gamepage__image {
-  max-height: 350px;
-  max-width: 350px;
+  max-height: 300px;
+  max-width: 300px;
   padding: 30px 0 30px 0;
 }
 .gamepage__keyboard__buttons {
-  max-height: 350px;
-  max-width: 350px;
+  max-height: 300px;
+  max-width: 300px;
 }
 .gamepage__container {
   display: flex;
