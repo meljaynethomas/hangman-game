@@ -110,7 +110,7 @@ const updateUserState = (event) => {
     }
 
   if(hasWon) {
-    document.querySelector(".gamepage__image").src = "/images/img_win.png";
+    document.querySelector(".gamepage__image").src = "./images/img_win.png";
     document.querySelector(".user__status-update").innerHTML = "You Win!"
     document.querySelector(".user__status-refresh").style.display = "block";
       const refreshButton = document.querySelector(".user__status-refresh");
