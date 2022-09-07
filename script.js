@@ -110,7 +110,7 @@ const updateUserState = (event) => {
     }
 
   if(hasWon) {
-    document.querySelector(".gamepage__image").src = "./images/img_win.png";
+    document.querySelector(".gamepage__image").src="./images/img_win.png";
     document.querySelector(".user__status-update").innerHTML = "You Win!"
     document.querySelector(".user__status-refresh").style.display = "block";
       const refreshButton = document.querySelector(".user__status-refresh");
@@ -119,17 +119,17 @@ const updateUserState = (event) => {
         }
         refreshButton.addEventListener("click", refreshPage);
   } else if(incorrectGuesses === 1) {
-    document.querySelector(".gamepage__image").src = "./images/img2_head.png";
+    document.querySelector(".gamepage__image").src="./images/img2_head.png";
   } else if(incorrectGuesses === 2) {
-    document.querySelector(".gamepage__image").src = "./images/img3_head_body.png";
+    document.querySelector(".gamepage__image").src="./images/img3_head_body.png";
   } else if(incorrectGuesses === 3) {
-    document.querySelector(".gamepage__image").src = "./images/img4_one_arm.png";
+    document.querySelector(".gamepage__image").src="./images/img4_one_arm.png";
   } else if(incorrectGuesses === 4) {
-    document.querySelector(".gamepage__image").src = "./images/img5_two_arms.png";
+    document.querySelector(".gamepage__image").src="./images/img5_two_arms.png";
   } else if(incorrectGuesses === 5) {
-    document.querySelector(".gamepage__image").src = "./images/img6_one_leg.png";
+    document.querySelector(".gamepage__image").src="./images/img6_one_leg.png";
   } else if(incorrectGuesses === 6) {
-    document.querySelector(".gamepage__image").src = "./images/img7_lose.png";
+    document.querySelector(".gamepage__image").src="./images/img7_lose.png";
     displayedAnswerState.innerHTML = word;
     document.querySelector(".user__status-update").innerHTML = "You Lose!"
     document.querySelector(".user__status-refresh").style.display = "block";
